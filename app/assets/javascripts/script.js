@@ -3,7 +3,7 @@
 $(window).on("load",function(){
 
     $(".loader-backdrop").fadeOut();
-    
+
     if($(".modal").length){
         $(".modal").each(function(){
             var currentModal=$(this);
@@ -11,7 +11,7 @@ $(window).on("load",function(){
             if((currentModal.attr("data-open-onload"))=="true"){    // Checks Each Modal
                setTimeout(function(){
                 currentModal.modal();
-            }, currentModal.attr("data-open-delay")); 
+            }, currentModal.attr("data-open-delay"));
             }
 
         });
@@ -28,59 +28,59 @@ $(document).ready(function(){
     if($(".parallax").length && $(window).width() > 960){
 		backgroundParallax();			// Call to  background parallax
     }
-	
+
     if($(".logo-slider").length){
-        logoSlider();					// Call to Logo Slider 
+        logoSlider();					// Call to Logo Slider
     }
-    
+
     if($(".news-slider").length){
         $(".news-slider").each(function(){
             newsSlider(this);			// Call to News slider
         });
     }
-    
+
     if($(".testimonial-slider").length){
         testimonialSlider();			// Call to Testimonial Slider
     }
-    
+
     if($(".department-slider").length){
         departmentSlider();				// Call to Mini Department Slider
     }
-    
+
     if($(".anything-slider").length){
         anythingSlider();				// Call to Anything slider
     }
-    
+
     if($(".circle").length){
         $(".circle").each(function(){
             $(this).appear(function() {        // Call function circleProgressBar() only when the Element is in viewport
                 circleProgressBar(this);       // Call to Progress Bar
             });
         });
-    }    
-    
+    }
+
     if($("select").length){
         bootstrapSelect();				// Call to Bootstrap Select Dropdown
     }
-    
+
     if($(".date-select").length){
         dateSelect();					// Call to Date Picker
     }
-    
+
     if($(".widget-testimonial").length){
         testimonialWidgetSlider();		// Call to Testimonial Widget
     }
-    
+
     if($("#fixed-appointment").length){
         fixedAppointment();				// Call to Fixed Appointment Form
     }
-    
+
     if($(".timer").length){
        $(".timer").each(function(){
            countdownTimer(this);        // Call to Event Countdown Timer (Coming Soon Page)
        });
     }
-    
+
     if($(".fact-count").length){
         $(".fact-count").each(function(){
             $(this).appear(function() {        // Call to function countTo() only when the Element is in viewport
@@ -88,47 +88,47 @@ $(document).ready(function(){
             });
         });
     }
-    
+
     if($("#back").length){              // Back To Top Icon
         backToTop();
     }
-    
+
     if($("#slider").length){
         sliderRevolution();				// Call to Slider Revolution with Image
     }
-    
+
     if($("#slider-video").length){
         sliderRevolutionVideo();		// Call to Slider Revolution with Video Background
-    } 
-    
-    if($(".youtube").length){    
+    }
+
+    if($(".youtube").length){
         $(".youtube").each(function(){
             youtubeVideo(this);         // Style each video found on page
-        });        
+        });
     }
-    
+
     if($(".gmap").length){
-        
+
         $(".gmap").each(function(){
-            
+
             var lat=$(this).attr("data-lat");            // Latitude of the place to be marked
-            
+
             var long=$(this).attr("data-long");          // Longitude of the place to be marked
 
             var infoWin=$(this).attr("data-info-win");   // Content to be shown in Info Window on Marker
 
-            googleMapStyle(lat, long, infoWin, this);    // Call to Google Map Styler  
+            googleMapStyle(lat, long, infoWin, this);    // Call to Google Map Styler
         });
     }
-    
+
     if($("a[data-gal^='prettyPhoto']").length){
 		callPrettyPhoto();                              // Pretty Photo
 	}
-    
+
     if($("#main-contact-form").length){					// Ajax Form Validation and Submission
 		callFormSubmit();
     }
-        	
+
 });
 
 
@@ -143,7 +143,7 @@ function backgroundParallax(){
 
   $fwindow.on('scroll resize', function() {
     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  }); 
+  });
 
   $('[data-type="content"]').each(function (index, e) {
     var $contentObj = $(this);
@@ -152,7 +152,7 @@ function backgroundParallax(){
     var speed = ($contentObj.data('speed') || 1 );
 
     $fwindow.on('scroll resize', function (){
-      yPos = fgOffset - scrollTop / speed; 
+      yPos = fgOffset - scrollTop / speed;
 
       $contentObj.css('top', yPos);
     });
@@ -166,28 +166,28 @@ function backgroundParallax(){
     var speed = ($backgroundObj.data('speed') || 0 );
 
     $fwindow.on('scroll resize', function() {
-      yPos = - ((scrollTop - bgOffset) / speed); 
+      yPos = - ((scrollTop - bgOffset) / speed);
       coords = '50% '+ yPos + 'px';
 
       $backgroundObj.css({ backgroundPosition: coords });
-    }); 
-  }); 
+    });
+  });
 
   $fwindow.trigger('scroll');
 }
 
 function logoSlider(){
-    
+
     var logoSliderVar= $('.logo-slider .slider-items');
-    
+
     $('.logo-slider .left').click(function() {
         logoSliderVar.trigger('prev.owl.carousel');
     })
-    
+
     $('.logo-slider .right').click(function() {
         logoSliderVar.trigger('next.owl.carousel');
     })
-    
+
     logoSliderVar.owlCarousel({
         items:"1",
         loop: "true",
@@ -209,17 +209,17 @@ function logoSlider(){
 }
 
 function newsSlider(currentNews){
-    
+
     var newsSliderVar= $('.slider-items', currentNews);
-    
+
     $('.left', currentNews).click(function() {
         newsSliderVar.trigger('prev.owl.carousel');
     })
-    
+
     $('.right', currentNews).click(function() {
         newsSliderVar.trigger('next.owl.carousel');
     })
-    
+
     newsSliderVar.owlCarousel({
         items:"1",
         loop: "true",
@@ -233,17 +233,17 @@ function newsSlider(currentNews){
 }
 
 function testimonialSlider(){
-    
+
     var testimonialSliderVar= $('.testimonial-slider .slider-items');
-    
+
     $('.testimonial-slider .left').click(function() {
         testimonialSliderVar.trigger('prev.owl.carousel');
     })
-    
+
     $('.testimonial-slider .right').click(function() {
         testimonialSliderVar.trigger('next.owl.carousel');
     })
-    
+
     testimonialSliderVar.owlCarousel({
         items:"1",
         loop: "true",
@@ -257,17 +257,17 @@ function testimonialSlider(){
 }
 
 function departmentSlider(){
-    
+
     var departmentSliderVar= $('.department-slider .slider-items');
-    
+
     $('.department-slider .left').click(function() {
         departmentSliderVar.trigger('prev.owl.carousel');
     })
-    
+
     $('.department-slider .right').click(function() {
         departmentSliderVar.trigger('next.owl.carousel');
     })
-    
+
     departmentSliderVar.owlCarousel({
         items: 1,
         loop: "true",
@@ -288,17 +288,17 @@ function departmentSlider(){
 }
 
 function anythingSlider(){
-    
+
     var anythingSliderVar= $('.anything-slider .slider-items');
-    
+
     $('.anything-slider .left').click(function() {
         anythingSliderVar.trigger('prev.owl.carousel');
     })
-    
+
     $('.anything-slider .right').click(function() {
         anythingSliderVar.trigger('next.owl.carousel');
     })
-    
+
     anythingSliderVar.owlCarousel({
         items: 1,
         margin:30,
@@ -337,17 +337,17 @@ function dateSelect(){
 }
 
 function testimonialWidgetSlider(){
-    
+
     var widgetTestimonialSliderVar= $('.widget-testimonial .slider-items');
-    
+
     $('.widget-testimonial .left').click(function() {
         widgetTestimonialSliderVar.trigger('prev.owl.carousel');
     })
-    
+
     $('.widget-testimonial .right').click(function() {
         widgetTestimonialSliderVar.trigger('next.owl.carousel');
     })
-    
+
     widgetTestimonialSliderVar.owlCarousel({
         items:"1",
         loop: "true",
@@ -362,7 +362,7 @@ function testimonialWidgetSlider(){
 
 function fixedAppointment(){
     $("#open-form").click(function(){
-       $("#fixed-appointment .form-body").toggle("linear"); 
+       $("#fixed-appointment .form-body").toggle("linear");
     });
 }
 
@@ -378,14 +378,14 @@ function countdownTimer(thisTimer)
 }
 
 function countToNumber(thisCounter){
-    $(thisCounter).countTo();                    
+    $(thisCounter).countTo();
 }
 
 function backToTop()
 {
-    var offset = 250;                          // Offset after which Back To Top button will be visible 
+    var offset = 250;                          // Offset after which Back To Top button will be visible
     var duration = 1000;                       // Time duration in which the page scrolls back up.
-    
+
     jQuery(window).scroll(function() {
         if (jQuery(this).scrollTop() > offset) {
             $('#back').fadeIn(500);
@@ -398,7 +398,7 @@ function backToTop()
         event.preventDefault();
         jQuery('html, body').animate({scrollTop: 0}, duration);
         return false;
-    });    
+    });
 }
 
 function sliderRevolution()
@@ -438,15 +438,15 @@ function sliderRevolutionVideo()
 }
 
 function youtubeVideo(currentVideo)
-{    
+{
     var videoId = $(currentVideo).attr("data-video-id");                                    // Get Video ID from data attributes
-    
+
     var thumbnail = 'url(https://img.youtube.com/vi/'+ videoId + '/sddefault.jpg)';         // Get Thumbail image of the video
-    
+
     $(currentVideo).css("background-image", thumbnail);                                     // Set thmbnail image as the background
-    
+
     var videoUrl= "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";    // Framing Video URL from video ID
-    
+
     $(currentVideo).find(".btn-play").click(function(){                                     // If play button is clicked, load Video within IFrame
         var videoFrame = $('<iframe/>', {
             'frameborder': '0',
@@ -457,15 +457,15 @@ function youtubeVideo(currentVideo)
         $("#video-container").append(videoFrame);                                            // Finally replace the div with IFrame
         $("#modal-video").modal("show");                                                     // Show modal once ready with Video
     });
-    
+
     $("#modal-video").on('hidden.bs.modal', function(){                                      // Delete iFrame after Modal hides
         $(this).find("iframe").remove();
     });
-    
+
 }
 
 function googleMapStyle(lat, long, infoWin, currentMap)
-{   
+{
     var styles = [
      {
         "featureType": "administrative",
@@ -561,37 +561,37 @@ function googleMapStyle(lat, long, infoWin, currentMap)
         ]
     }
 ];
-    
+
     var options = {
         mapTypeControlOptions: {
         mapTypeIds: ['Styled']
         },
         center: new google.maps.LatLng(lat, long),
         zoom: 14,
-        disableDefaultUI: true, 
+        disableDefaultUI: true,
         mapTypeId: 'Styled'
     };
-    
+
     var div = currentMap;
-    
+
     var map = new google.maps.Map(div, options);
-    
+
     var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
-    
+
     map.mapTypes.set('Styled', styledMapType);
-    
+
     var marker = new google.maps.Marker({
         map: map,
         position: new google.maps.LatLng(lat, long)             // Set Marker Position of the place
     });
-    
+
     marker['infowindow'] = new google.maps.InfoWindow({
         content: infoWin                                        // Set Content of the Info Window of the Marker
     });
 
     new google.maps.event.addListener(marker, 'mouseover', function() {
         this['infowindow'].open(map, this);                     // On Marker Hover, show Info Window
-    });    
+    });
 }
 
 function callPrettyPhoto()
@@ -601,7 +601,7 @@ function callPrettyPhoto()
 
 
 function callFormSubmit(){
-    var options = 
+    var options =
 	{
 		clearForm : 'false',
 		type : 'POST',
@@ -610,22 +610,22 @@ function callFormSubmit(){
 		resetForm : 'false',
 		async : 'true',
 		datatype : 'html',
-		timeout : 2400000,		
-		
+		timeout : 2400000,
+
 		beforeSend:function(){
 			var text = "<i class='fa fa-spinner fa-spin'></i>Submitting your message, please wait.";
 			$("#status").empty().html(text);
 		},
-		
+
 		complete: function(xhr, textStatus)
 		{
 			$("#status").empty().html(xhr.responseText);
 		},
-		
+
 		error: function(jqXHR, textStatus, errorThrown)
 		{
-			$("#status").empty().html('Error in application : Please try again.');		
-		}				
+			$("#status").empty().html('Error in application : Please try again.');
+		}
 	};
 
 	$.validator.setDefaults({
@@ -635,21 +635,21 @@ function callFormSubmit(){
 	});
 
 	$("#main-contact-form").validate({
-        
+
 		rules: {
 			fname:  {
 				required: true,
-			},		
+			},
 			lname:  {
 				required: true,
-			},		
+			},
 			email:  {
 				required: true,
 				email: true,
-			},			
+			},
 			subject: {
 				required: true,
-			}, 
+			},
 			message: {
 				required: true,
 			}
@@ -672,9 +672,9 @@ function callFormSubmit(){
 				required: "Please enter your message.",
 			}
 		},
-        
+
         errorPlacement: function() {
              return false;
            }
-	});    
+	});
 }
