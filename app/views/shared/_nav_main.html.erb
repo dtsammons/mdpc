@@ -1,20 +1,20 @@
 <nav class="navbar navbar-default">         <!-- Navigation Bar -->
-    <div class="container">            
+    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
                 <span class="sr-only">Toggle Menu</span>
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="home-version-1.html">
-                <img src="<%= image_path('mdpc_logo.png') %>" alt="">          <!-- Replace with your Logo -->
+            <a class="navbar-brand" href="<%= root_url %>">
+                <img src="<%= image_path('mdpc_logo.png') %>" style="width:150px;" alt="">          <!-- Replace with your Logo -->
             </a>
         </div>
-        
+
         <div class="collapse navbar-collapse" id="main-navigation">         <!-- Main Menu -->
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="<%= root_url %>">Home</a>
                 		<!-- Sub Menu -->
-                    <!-- <ul class="sub-menu">           
+                    <!-- <ul class="sub-menu">
                         <li><a href="home-version-1.html">Home Version 1 <span class="badge">Appointment Form</span> </a></li>
                         <li><a href="home-version-2.html">Home Version 2 <span class="badge">Slider Revolution</span> </a></li>
                         <li><a href="home-version-3.html">Home Version 3 <span class="badge">Video Background</span> </a></li>
@@ -140,5 +140,5 @@
                 </li>
             </ul>
         </div>
-    </div>            
+    </div>
 </nav>
