@@ -24,5 +24,4 @@
 //= require jquery-ui.min
 //= require script
 //= require rails-ujs
-//= require turbolinks
 //= require_tree .
