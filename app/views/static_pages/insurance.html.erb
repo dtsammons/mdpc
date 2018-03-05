@@ -1,0 +1,69 @@
+<div class="loader-backdrop">           <!-- Loader -->
+  <div class="loader"></div>
+</div>
+
+<header class="header-1">           <!-- Header Style 1 -->
+  <%= render 'social_icons' %>
+  <%= render 'shared/nav_main_dark' %>
+</header>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Insurance Plans Accepted</h1>
+    <div class="breadcrumb-2">
+      <ul class="breadcrumb">
+        <li><a href="<%= root_url %>">Home</a></li>
+        <li class="active">Insurance</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-60">
+  <div class="row">
+    <h3 class="heading"> We currently accept the following plans.</h3>
+    <div class="col-sm-6 mt-20">
+      <ul class="list-styled">
+        <li>Blue Cross Blue Shield (Anthem)</li>
+        <li>United Healthcare</li>
+        <li>Cigna</li>
+        <li>Encore</li>
+        <li>Sagamore</li>
+        <li>MDwise</li>
+        <li>Encircle</li>
+        <li>Goshen Preferred Network</li>
+        <li>Health Net Federal</li>
+        <li>PHP</li>
+        <li>Signature Care</li>
+      </ul>
+    </div>
+    <div class="col-sm-6 mt-20">
+      <ul class="list-styled">
+        <li>Aetna</li>
+        <li>Allied Benefit Systems</li>
+        <li>Meritain</li>
+        <li>NGS American</li>
+        <li>North America Administrators</li>
+        <li>Auxiant</li>
+        <li>UMR</li>
+        <li>MHS (Ambetter)</li>
+        <li>Humana</li>
+        <li>ChoiceCare</li>
+        <li>Medicare</li>
+        <li>...and several more</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 mt-20">
+      <p class="justify">If you are uninsured, have a health sharing plan, or have a high-deductible insurance plan, we have affordable self-pay options! See our Direct Primary Care page for more information.</p>
+    </div>
+  </div>
+</div>
+
+<%= render 'footer' %>
+
+<div id="back"><i class="fa fa-angle-up"></i></div>
+
+<!-- Custom JS -->
+<script src="<%= javascript_path('script.js') %>" type="text/javascript"></script>
