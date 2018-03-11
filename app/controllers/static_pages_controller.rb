@@ -3,4 +3,5 @@ class StaticPagesController < ApplicationController
   def doctor; end
   def insurance; end
   def contact; end
+  def plans; end
 end

@@ -1232,7 +1232,7 @@ legend{
 
 .header-1 + .page-header{
     position: relative;
-    background-image: url(../images/page-header-1.jpg);
+    background-image: image-url('page-header-1.jpg');
     background-size: cover;
     background-position: center center;
     text-align: left;
@@ -1242,7 +1242,7 @@ legend{
 }
 
 .header-2 + .page-header{
-    background-image: url(../images/page-header-2.jpg);
+    background-image: image-url('page-header-2.jpg');
     background-size: cover;
     background-position: center center;
     text-align: center;
@@ -1273,7 +1273,7 @@ legend{
 }
 
 .header-3 + .page-header{
-    background-image: url(../images/page-header-3.png);
+    background-image: image-url('page-header-3.png');
     text-align: left;
     margin:0;
     padding: 40px 0px;
@@ -1415,7 +1415,7 @@ legend{
 }
 
 .tabs-1 .tab-content>.tab-pane{
-    background-image: url(../images/accordion-background.jpg);
+    background-image: image-url('accordion-background.jpg');
     background-size: cover;
     padding: 25px;
     -webkit-transform: translateY(10%);
@@ -1745,7 +1745,7 @@ legend{
     border-radius: 0px;
     border:0;
     margin-bottom: 8px;
-    background-image: url(../images/accordion-background.jpg);
+    background-image: image-url('accordion-background.jpg');
     background-size: cover;
 }
 

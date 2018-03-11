@@ -1,0 +1,165 @@
+<div class="loader-backdrop">           <!-- Loader -->
+  <div class="loader">
+  </div>
+</div>
+
+<header class="header-1">           <!-- Header Style 1 -->
+  <%= render 'social_icons' %>
+  <%= render 'shared/nav_main_dark' %>
+</header>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Self Pay Options</h1>
+    <div class="breadcrumb-2">
+      <ul class="breadcrumb">
+        <li><a href="<%= root_url %>">Home</a></li>
+        <li class="active">Self Pay Options</li>
+      </ul>
+    </div>
+  </div>
+</div>    
+
+<div class="container mt-60 mb-60">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="heading text-center">Monthly Payment Options</h2>
+            <hr class="hr-1">
+        </div>
+        <div class="col-md-6">
+            <div class="pricing-box-2">
+                <div class="header">
+                    <h3 class="heading">Individual Membership <small>(monthly)</small></h3>
+                    <div class="price">
+                        <span>$29<small>.00</small></span>
+                        <span>per month</span>
+                    </div>
+                    <br/>
+                    <a href="book-appointment-form.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Buy Now!</a>
+                </div>
+                <div class="body">
+                    <div class="features">
+                        <ul>
+                            <li>
+                                <strong>Enrollment Fee</strong>
+                                <span>One-time enrollment fee of $79.00</span>
+                            </li>
+                            <li>
+                                <strong>Hair Treatment</strong>
+                                <span>Hair Thickness, Carbon Levels, Root analysis and tips</span>
+                            </li>
+                            <li>
+                                <strong>Eye Care</strong>
+                                <span>eye Sight Checkup, Free Pair of Lenses and tips for betterment.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="pricing-box-2 popular">
+                <div class="header">
+                    <h3 class="heading">Family Membership <small>(monthly)</small></h3>
+                    <div class="price">
+                        <span>$99<small>.00</small></span>
+                        <span>per month</span>
+                    </div>
+                    <br/>
+                    <a href="book-appointment-form.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Buy Now!</a>
+                </div>
+                <div class="body">
+                    <div class="features">
+                        <ul>
+                            <li>
+                                <strong>Enrollment Fee</strong>
+                                <span>One-time enrollment fee of $79.00</span>
+                            </li>
+                            <li>
+                                <strong>Hair Treatment</strong>
+                                <span>Hair Thickness, Carbon Levels, Root analysis and tips</span>
+                            </li>
+                            <li>
+                                <strong>Eye Care</strong>
+                                <span>eye Sight Checkup, Free Pair of Lenses and tips for betterment.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="heading text-center">Annual Payment Options</h2>
+            <hr class="hr-1">
+        </div>
+        <div class="col-md-6">
+            <div class="pricing-box-2">
+                <div class="header">
+                    <h3 class="heading">Individual Membership <small>(annually)</small></h3>
+                    <div class="price">
+                        <span>$348<small>.00</small></span>
+                        <span>per year</span>
+                    </div>
+                    <br/>
+                    <a href="book-appointment-form.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Buy Now!</a>
+                </div>
+                <div class="body">
+                    <div class="features">
+                        <ul>
+                            <li>
+                                <strong>No Enrollment Fee</strong>
+                                <!-- <span>One-time enrollment fee of $79.00</span> -->
+                            </li>
+                            <li>
+                                <strong>Hair Treatment</strong>
+                                <span>Hair Thickness, Carbon Levels, Root analysis and tips</span>
+                            </li>
+                            <li>
+                                <strong>Eye Care</strong>
+                                <span>eye Sight Checkup, Free Pair of Lenses and tips for betterment.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="pricing-box-2 popular">
+                <div class="header">
+                    <h3 class="heading">Family Membership <small>(annually)</small></h3>
+                    <div class="price">
+                        <span>$1,188<small>.00</small></span>
+                        <span>per year</span>
+                    </div>
+                    <br/>
+                    <a href="book-appointment-form.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Buy Now!</a>
+                </div>
+                <div class="body">
+                    <div class="features">
+                        <ul>
+                            <li>
+                                <strong>No Enrollment Fee</strong>
+                                <!-- <span>Includes Blood Pressure, RBC Count, Body Mass Index and Bone Marrow</span> -->
+                            </li>
+                            <li>
+                                <strong>Hair Treatment</strong>
+                                <span>Hair Thickness, Carbon Levels, Root analysis and tips</span>
+                            </li>
+                            <li>
+                                <strong>Eye Care</strong>
+                                <span>eye Sight Checkup, Free Pair of Lenses and tips for betterment.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+
+<%= render 'footer' %>
+
+<!-- Custom JS -->
+<script src="<%= javascript_path('script.js') %>" type="text/javascript"></script>

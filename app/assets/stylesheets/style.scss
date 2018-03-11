@@ -2056,7 +2056,7 @@ blockquote footer{
 /* Health Tips */
 
 .health-tips{
-    background-image: url(../images/dos.png), url(../images/dont.png);
+    background-image: image-url('dos.png'), image-url('dont.png');
     background-position: left center, right center;
     background-size: 0%;
     background-repeat: no-repeat;
