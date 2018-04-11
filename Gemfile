@@ -40,6 +40,9 @@ gem 'bcrypt', '~> 3.1.7'
 # font awesome integration
 gem 'font-awesome-rails'
 
+gem 'dotenv-rails'
+gem 'faraday'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

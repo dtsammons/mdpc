@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'admin/index'
+
   root 'static_pages#index'
   get 'doctor', to: 'static_pages#doctor'
   get 'about',  to: 'static_pages#about'
