@@ -9,7 +9,11 @@ class Connection
       faraday.response :logger
       faraday.adapter Faraday.default_adapter
       faraday.headers['Content-Type'] = 'application/json'
-      faraday.headers['X-Mashape-Key'] = ENV['MASHAPE_KEY']
+      faraday.headers['Gateway_ID'] = ENV['TE_GATEWAY_ID']
+      faraday.headers['HostedKey'] = ENV['TE_HOSTED_KEY']
+      faraday.headers['RURL'] = 'https://hidden-tor-85153.herokuapp.com/'
+      faraday.headers['CURL'] = 'https://hidden-tor-85153.herokuapp.com/'
+      
     end
   end
 end
