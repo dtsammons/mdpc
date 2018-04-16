@@ -1,6 +1,6 @@
 module Transexp
   class Base
-    attr_accesor :errors
+    attr_accessor :errors
     
     def initialize(args = {})
       args.each do |name, value|

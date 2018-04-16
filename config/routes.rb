@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'subscribers/index'
+
+  get 'subscribers/show'
+
   get 'admin/index'
 
   root 'static_pages#index'
