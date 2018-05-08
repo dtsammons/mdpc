@@ -27,7 +27,7 @@ module Transexp
     def self.random(query = {})
       response = Request.where('subscribers/random', query.merge({ number: MAX_LIMIT }))
       subscribers = response.fetch('subscribers', []).map { |subscriber| Subscriber.new(subscriber) }
-      [ subscribres, response[:errors] ]
+      [ subscribers, response[:errors] ]
     end
     
     def initialize(args = {})
