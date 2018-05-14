@@ -1,6 +1,6 @@
 class SubscribersController < ApplicationController
   def index
-    @subscribers, @errors = Transexp::Subscriber.random(query)
+    @subscribers, @errors = Transexp::Subscriber.find(1)
   end
 
   def show
